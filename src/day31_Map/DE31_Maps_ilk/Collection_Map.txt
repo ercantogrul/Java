@@ -1,0 +1,101 @@
+Javada veriyi saklamak için olusturulan yapılar(data structure)
+
+-Array(Class)
+            -Sabit boyutlu
+            -Hem primitive hem non primitive destekler
+=======================================================================================================================================================================
+-Collection(Interface)
+            -Dynamic size(Artır azaltılabilir)
+            -Sadece non-primitive destekler  (int, long,double,boolean vb kullanamaz)
+
+
+      1-List(Inteface):
+            a_ArrayList (Class):ArrayList<Integer> alist = new ArrayList <>(); //constructor yani referans List olamaz. objebin kullanilacagi data türü List (Parent class) olabilir.
+                        *indeks yapısı mevcut
+                        *Ekleme sıralamasına göre liste oluştur(Order)
+                        *Arama konusunda daha hızlı
+
+            b_LinkedList(Class):LinkedList<Integer> llist = new LinkedList <>(); //constructor yani referans List olamaz.
+                        *indeks yapısı bulunmaz
+                        *Pointer ile liste içisinde dolaşır
+                        *Ekleme ve Silme işlemleri hızlı
+                        *Ekleme sıralamasına göre liste oluştur(Order)
+
+                        //Linked List elementleri birbirine bagli bir zincir seklinde tutar
+                        //Bir LinkedList olusturuldugunda ilk element olarak head olusturulur, head sadece 1.elementin adres bilgisini tutar.
+                          Sonraki elementler data ve kendinden sonraki elementin adresini tutan iki parcadan olusur
+                          Bu ikili yapinin herbirine node ismi verilir.Son node’a tail(kuyruk) denir ve adres bolumunde nullPointer bulunur. .
+                        //- Linked yapisindan dolayi element ekleme ve silme cok kolaydir ancak elementlere ulasmak yavastir.
+                      **LinkedList class’i interface’lerin child’i olan bir concrete class oldugundan 3 interface’deki method’larin tamamini override etmistir.
+                        Data turu olarak LinkedList secilirse 3 interface’in tum ozellikleri kullanilabilir.
+
+      2-Set(Interface) (Kume)
+                    *Unique veriler tutar (tum elementlerin unique oldugu collection’dir.)
+                    *Pointer ve index bulunmaz ,hashTable kullanılır (Detaylı bilgi için araştırılabilir)
+            a_HashSet(Class):  HashSet<String> hs1 = new HashSet<>(Arrays.asList("yavuz","ayse","jhon","michel","timo","hasan","Kazım"));
+                               Set<String> hs3 = new TreeSet<>(Arrays.asList("yavuz","ayse","jhon","zmichel","timo","ıhasan","kazım"));
+
+                        *En Hızlı Collection
+                        *Null Değeri içerebilir
+                        *sıralama rastgele
+
+            b_LinkedHasSet(Class): LinkedHashSet<String> hs2 = new LinkedHashSet<>(Arrays.asList("yavuz","ayse","jhon","michel","timo","hasan","Kazım"));
+                        *Sırama ekleme sırasına göredir
+                        *Null değeri kullanılabilir
+                        *Elemanlar unique
+
+       Set(Interface) in altinda SortedSet (Interface) onun altinda ise;
+            c_TreeSet(Class): TreeSet<String> hs4 = new TreeSet<>(Arrays.asList("yavuz","ayse","jhon","zmichel","timo","ıhasan","kazım"));
+                        *Sıralama ascendirng order(Küçükten büyüğe sıralama yapılır A'dan Z'ye  veya 1'den ...)
+                        *Null değeri eklenemez.(NullPointerException alırız...)
+                        *Siralama onemli ise SortedSet interface’i altindaki TreeSet class’i kullanilabilir. TreeSet siralama yaptigi icin digerlerine gore daha yavas calisir.
+
+      3-Queue(Interface) (Sira): Queue<String> q1 = new LinkedList<>(Arrays.asList("javaCAN","javaSU","javvaNUR","javaNAZ"));
+                                 * Queue’nun temel ozelligi FIFO ( First In First Out ) kuralidir. elemanlar en sona eklenir ve en bastan silinir
+                                   Eczane ve yemekhane gibi tuketim suresi sinirli malzeme kullanan isletmeler icin onemli bir ozelliktir.
+                                 * Queue Interface oldugu icin obje olusturmak mumkun degildir.Queue ozelliklerine sahip bir obje olusturmak icin
+                                   1-PriorityQueue veya 2-LinkedList class’larindan constructor kullanilmalidir.
+
+                PriotyQueue (Class): PriorityQueue Java’nin belirlemis oldugu bir oncelige gore siralama yapar,
+                LinkedList (Class) : LinkedList ise ekleme sirasina gore bir list olusturur.
+
+       Dequeu:  Deque<String> dq1 = new LinkedList<>(Arrays.asList("javaCAN", "javaSU", "javvaNUR", "javaNAZ", "javaTAR"));
+                 *Double ended queue (iki tarafli kuyruk) demektir. Ekleme ve silme iki taraftan da yapilabilir.
+                 *Deque’de hem FIFO hem de LIFO gecerlidir.
+                 *NOT : deque null element kabul etmez.
+
+
+====================================================================================================================================
+
+            -Map(Interface):
+                 Collection Of Pairs : key ve value şeklinde değerleri tutar
+                                       Key'ler unique olmak zorunda
+                                       Value 'lar aynı değeri alabilir
+                                       Dynamic size
+                                       Sadece Non-primitive destekler:
+           1) HashMap(Class):
+                        Map inteface'den üretilir
+                        Key ve Value null değeri alabilir(Key değeri sadce bir tane alabilir)
+                        Sıralama önemli değil
+                        En hızlı map..
+
+
+
+           2) LinkedHashMap(Class):
+                       Map inteface'den üretilir
+                       Key ve Value null değeri alabilir
+                       Eklenme sıralamayı korur.
+
+
+           3) TreeMap(Class):
+                       Map > SortedMap interfacinde üretilmiş sınıftır
+                       Key Değeri null olamaz
+                       Sıralama ascendir order'a göre yapılır
+                      (Küçükten Büyüğe)
+
+           4) HashTable(Class)
+                        Thrad safe synchronized
+                        O yüzden en yavaş
+                        Sıralama önemli değil
+                        Null değeri olabilir
+

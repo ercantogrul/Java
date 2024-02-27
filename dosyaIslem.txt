@@ -1,0 +1,8 @@
+1*2*14/Jan./2024*tamir*150*100*true
+2*3*14/Jan./2024*bakim*170*50*true
+3*1*14/Jan./2024*tamir*180*100*true
+4*1*14/Jan./2024*tamir*150*200*true
+5*3*14/Jan./2024*bakim*200*150*true
+6*2*14/Jan./2024*tamir*100*150*true
+7*4*15/Jan./2024*bakim*120*100*true
+8*2*15/Jan./2024*tamirat*120*100*true

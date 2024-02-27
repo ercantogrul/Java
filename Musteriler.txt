@@ -1,0 +1,4 @@
+1*Cengiz Cicek*Cengiz str 12, 7635 Cengiz*cengiz01@gmail.com*01721231212*0
+2*Erkan Celep *Erkan 43,6352 EEEEE*erkan01Qgmail.com*0172343434*0
+3*Zeynep Basaran*basaran str 15, 73226 BBBBB*basaran0@gmail.com*01725664545*1
+4*Ayse Dag*ayse str16,73652 AAAA*ayse01@gmail.com*01726763434*0

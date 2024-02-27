@@ -1,0 +1,60 @@
+3 Model Bilgisayar bulunmaktadır:
+============================================
+            -HP
+            -Apple
+            -Casper
+4 Farklı Renk Seçeneği Mevcut
+=============================================
+            -RED (Sadece Casper'de mevcut)
+            -WHITE
+            -BLACK
+            -SILVER
+4 Farklı Boyut Mevcut
+=============================================
+            -XXL (Sadece Apple'de Mevcut)
+            -XL
+            -Large
+            -Small (Casper'de mevcut değil)
+5 Farklı Ram Mevcut
+=============================================
+            -64 GB (Hp'de mevcut sadece)
+            -32 GB
+            -16 GB
+            -8  GB
+            -4  GB (Casper'de mevcut değil)
+--------------------------------------------------------------------------------------
+1) Bir adet Runner Class (Tek Giriş Menüsü içersin)
+2) Yukarıda belirtilen tüm özellikler ENUM classlarda  mevcut olmalı ve oradan çağrılmalı
+(Düzenli olmasına adına ENUM package oluşturabiliirsiniz.)
+3) Bir adet Computer Interface:
+                            -getColor()
+                            -getSize()
+                            -getRam()
+                            -getPrice()     methotları olmalı her bir laptop'un kendi ait özelliklere göre override edilmeli
+4) Dataları olduğu bir "Parent Class" tanımlayın;
+        -Modeller alt sınıf olacaktır.
+        -String model, ram, size, renk, laptopID şeklinde instance variables bulunmalı
+        -Her bir ID unique olmalı ve sırayla 1000'den itibaren ilerlemeli
+        -computers adında bir MAP oluşturun
+        -Eğer kullanıcı tüm seçlerini yaptıktan sonra satın almaya karar verirse satın alınan ürünün bilgileirni MAP'e ekleyin
+        -Menülerde yanlış giriş olması durumunda bir önceki menüye yönlendirin
+        -Çıkış yapmak isteyenler için Ana menü olmalı
+5)Fiyat Hesaplama:
+--------------------------------------------------------------------------------------
+        -Eğer marka APPLE  ise price 1500'den başlatın
+                    HP     ise price price 1300'den başlatın
+                    Casper ise price 1500'den başlatın
+        -Eğer ram 64 gb ise price 400 ekle
+                  32 gb ise price 300 ekle
+                  16 gb ise price 200 ekle
+                  8  gb ise price 100 ekle
+                  4  gb ise price 50 ekle
+        -Eğer renk  SIlVER ise price 400 ekle
+                    BLACK ise price 300 ekle
+                    WHITE ise price 200 ekle
+                    RED ise price 100 ekle
+                    ORANGE ise price 50 ekle
+        -Eğer size  XXL   ise price 400 ekle
+                    XL    ise price 400 ekle
+                    Large ise price 400 ekle
+                    Small ise price 400 ekle

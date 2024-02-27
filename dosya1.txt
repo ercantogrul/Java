@@ -1,0 +1,5 @@
+1*Cengiz Cicek*cicek str 42,33765 Cicek*cicek01@gmail.com*1712822233*true
+2*Erkan Celep*Celep str 12, 34252 Celep*celep01@gmail.com*1723873344*true
+3*Mehtap Arslan*Haupt str 23, 37363 Arslan*arslan01@gmail.com*1712862233*false
+4*Aynur Yildiz*Lange str 14,76767 Yildiz*yildiz01@gmail.com*1724317233*true
+5*Yeliz Ketenci*Kkkkk str 45,76765 Kkkkk*ketenci01@gmail.com*1712827676*true

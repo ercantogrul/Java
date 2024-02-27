@@ -1,0 +1,79 @@
+Javada veriyi saklamak için oluturulan yapılar(data structure)
+
+-Array(Class)
+      -Sabit boyutlu
+      -Hem primitive hem non primitive destekler
+=======================================================================================================================================================================
+-Collection(Interface)
+            -Dynamic size(Artır azaltılabilir)
+            -Sadece non-primitive destekler
+
+
+      -List(Inteface):
+            ArrayList (Class):
+                        *indeks yapısı mevcut
+                        *Ekleme sıralamasına göre liste oluştur(Order)
+                        *Arama konusunda daha hızlı
+            LinkedList(Class)
+                        *indeks yapısı bulunmaz
+                        *Pointer ile liste içisinde dolaşır
+                        *Ekleme ve Silme işlemleri hızlı
+                        *Ekleme sıralamasına göre liste oluştur(Order)
+
+     -Set(Interface)
+                    *Unique veriler tutar
+                    *Pointer ve index bulunmaz ,hashTable kullanılır (Detaylı bilgi için araştırılabilir)
+            HashSet(Class):
+                        *En Hızlı Collection
+                        *Null Değeri içerebilir
+                        *sıralama rastgele
+
+            LinkedHasSet(Class):
+                        *Sırama ekleme sırasına göredir
+                        *Null değeri kullanılabilir
+                        *Elemmanlar unique
+            TreeSet(Class):
+                        *Sıralama ascendirng order(Küçükten büyüğe sıralama yapılır A'dan Z'ye  veya 1'den ...)
+                        *Null değeri eklenemez.(NullPointerException alırız...)
+
+       Queue(Interface)
+                        Prioty Queue:
+                                    FIFO:(Firs in First Out)
+                        Dequeu:
+                                    LIFO:(Son giren ilk çıkar)
+
+
+====================================================================================================================================
+
+            -Map(Interface):
+                 Collection Of Pairs : key ve value şeklinde değerleri tutar
+                                       Key'ler unique olmak zorunda
+                                       Value 'lar aynı değeri alabilir
+                                       Dynamic size
+                                       Sadece Non-primitive destekler:
+           1) HashMap(Class):
+                        Map inteface'den üretilir
+                        Key ve Value null değeri alabilir(Key değeri sadce bir tane alabilir)
+                        Sıralama önemli değil
+                        En hızlı map..
+
+
+
+           2) LinkedHashMap(Class):
+                       Map inteface'den üretilir
+                       Key ve Value null değeri alabilir
+                       Eklenme sıralamayı korur.
+
+
+           3) TreeMap(Class):
+                       Map > SortedMap interfacinde üretilmiş sınıftır
+                       Key Değeri null olamaz
+                       Sıralama ascendir order'a göre yapılır
+                      (Küçükten Büyüğe)
+
+           4) HashTable(Class)
+                        Thrad safe synchronized
+                        O yüzden en yavaş
+                        Sıralama önemli değil
+                        Null değeri olabilir
+

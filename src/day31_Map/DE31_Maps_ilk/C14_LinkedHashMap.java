@@ -1,0 +1,21 @@
+package day31_Map.DE31_Maps_ilk;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
+public class C14_LinkedHashMap {
+    public static void main(String[] args) {
+        LinkedHashMap<String, String> hm = new LinkedHashMap<>();//bos hm tanımlandı
+        //Girdigimiz siraya göre cikti verir
+        hm.put("Amazon", "296 Euro");
+        hm.put("Saturn", "200 Euro");
+        hm.put("Vatan", "111 Euro");
+        hm.put("Apple", "450 Euro");
+        hm.put("Teknosa", "333 Euro");
+        hm.put("Meknoso", "333 Euro");
+        hm.put("Media Markt", "444 Euro");
+        for (String key : hm.keySet()){
+            System.out.println(key+", "+ hm.get(key));
+        }
+    }
+}
