@@ -35,6 +35,7 @@ public class S01_dizi_yazma_toplama {
             toplam1 += arr [i];
         }
         System.out.println(toplam1);  // 18
+        System.out.println();
         System.out.println("======================================");
 
         // soru 6:arr ve arr2 dizilerinin ilk elemanlarini toplayip arrT dizisinin ilk elemanina atayin, sirayla digerlerini de yapin.
